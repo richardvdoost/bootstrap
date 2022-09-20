@@ -1,0 +1,907 @@
+{
+    "Apple Global Domain" =     {
+        PKSecureElementAvailableFlagsByHost = 3;
+        PKSecureElementAvailableFlagsByHostSome = 3;
+        "com.apple.ColorSync.Devices" =         {
+            "Device.cmra.30303030-3830-3330-3030-303534384134" =             {
+                DeviceDescriptions =                 {
+                    "en_US" = iPhone;
+                };
+                FactoryProfiles =                 {
+                    555810816 =                     {
+                        DeviceModeDescriptions =                         {
+                            "en_US" = Default;
+                        };
+                        DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+                    };
+                    DeviceDefaultProfileID = 555810816;
+                };
+            };
+            "Device.cmra.30303030-3831-3130-3030-313934434334" =             {
+                DeviceDescriptions =                 {
+                    "en_US" = "Richard\\U2019s iPhone";
+                };
+                FactoryProfiles =                 {
+                    555810816 =                     {
+                        DeviceModeDescriptions =                         {
+                            "en_US" = Default;
+                        };
+                        DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+                    };
+                    DeviceDefaultProfileID = 555810816;
+                };
+            };
+            "Device.cmra.38646462-3336-3466-3534-646236396561" =             {
+                DeviceDescriptions =                 {
+                    "en_US" = "Richard van der Oost\\U2019s iPhone";
+                };
+                FactoryProfiles =                 {
+                    555810816 =                     {
+                        DeviceModeDescriptions =                         {
+                            "en_US" = Default;
+                        };
+                        DeviceProfileURL = "/System/Library/Frameworks/ICADevices.framework/Versions/A/Resources/Camera RGB Profile.icc";
+                    };
+                    DeviceDefaultProfileID = 555810816;
+                };
+            };
+            "Device.scnr.34423537-3538-3530-3330-333233393338" =             {
+                DeviceDescriptions =                 {
+                    "en_US" = "EPSON Stylus SX400";
+                };
+                FactoryProfiles =                 {
+                    286326784 =                     {
+                        DeviceModeDescriptions =                         {
+                            "en_US" = "Reflective Gray";
+                        };
+                        DeviceProfileURL = "/System/Library/ColorSync/Profiles/Generic Gray Gamma 2.2 Profile.icc";
+                    };
+                    287375360 =                     {
+                        DeviceModeDescriptions =                         {
+                            "en_US" = "Reflective RGB";
+                        };
+                        DeviceProfileURL = "/System/Library/ColorSync/Profiles/sRGB Profile.icc";
+                    };
+                    DeviceDefaultProfileID = 287375360;
+                };
+            };
+        };
+        "com.apple.keyboard.modifiermapping.1133-50475-0" =         (
+                        {
+                HIDKeyboardModifierMappingDst = 30064771113;
+                HIDKeyboardModifierMappingSrc = 30064771129;
+            }
+        );
+        "com.apple.keyboard.modifiermapping.1452-635-0" =         (
+                        {
+                HIDKeyboardModifierMappingDst = 30064771300;
+                HIDKeyboardModifierMappingSrc = 30064771129;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771113;
+                HIDKeyboardModifierMappingSrc = 30064771300;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771113;
+                HIDKeyboardModifierMappingSrc = 30064771296;
+            }
+        );
+        "com.apple.keyboard.modifiermapping.1539-242-0" =         (
+                        {
+                HIDKeyboardModifierMappingDst = 30064771300;
+                HIDKeyboardModifierMappingSrc = 30064771129;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771113;
+                HIDKeyboardModifierMappingSrc = 30064771300;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771113;
+                HIDKeyboardModifierMappingSrc = 30064771296;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771299;
+                HIDKeyboardModifierMappingSrc = 30064771302;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771303;
+                HIDKeyboardModifierMappingSrc = 30064771298;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771298;
+                HIDKeyboardModifierMappingSrc = 30064771303;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771302;
+                HIDKeyboardModifierMappingSrc = 30064771299;
+            }
+        );
+        "com.apple.keyboard.modifiermapping.5824-10203-0" =         (
+                        {
+                HIDKeyboardModifierMappingDst = 30064771113;
+                HIDKeyboardModifierMappingSrc = 30064771129;
+            }
+        );
+        "com.apple.keyboard.modifiermapping.9390-8211-0" =         (
+                        {
+                HIDKeyboardModifierMappingDst = 30064771300;
+                HIDKeyboardModifierMappingSrc = 30064771129;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 1095216660483;
+                HIDKeyboardModifierMappingSrc = 30064771300;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 280379760050179;
+                HIDKeyboardModifierMappingSrc = 30064771296;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771299;
+                HIDKeyboardModifierMappingSrc = 30064771302;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771303;
+                HIDKeyboardModifierMappingSrc = 30064771298;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771298;
+                HIDKeyboardModifierMappingSrc = 30064771303;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771302;
+                HIDKeyboardModifierMappingSrc = 30064771299;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771300;
+                HIDKeyboardModifierMappingSrc = 1095216660483;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771296;
+                HIDKeyboardModifierMappingSrc = 280379760050179;
+            }
+        );
+        "com.apple.mouse.tapBehavior" = 1;
+        "com.apple.trackpad.enableSecondaryClick" = 1;
+        "com.apple.trackpad.fiveFingerPinchSwipeGesture" = 2;
+        "com.apple.trackpad.fourFingerHorizSwipeGesture" = 2;
+        "com.apple.trackpad.fourFingerPinchSwipeGesture" = 2;
+        "com.apple.trackpad.fourFingerVertSwipeGesture" = 2;
+        "com.apple.trackpad.momentumScroll" = 1;
+        "com.apple.trackpad.pinchGesture" = 1;
+        "com.apple.trackpad.rotateGesture" = 1;
+        "com.apple.trackpad.scrollBehavior" = 2;
+        "com.apple.trackpad.threeFingerDragGesture" = 0;
+        "com.apple.trackpad.threeFingerHorizSwipeGesture" = 2;
+        "com.apple.trackpad.threeFingerTapGesture" = 0;
+        "com.apple.trackpad.threeFingerVertSwipeGesture" = 2;
+        "com.apple.trackpad.trackpadCornerClickBehavior" = 0;
+        "com.apple.trackpad.twoFingerDoubleTapGesture" = 1;
+        "com.apple.trackpad.twoFingerFromRightEdgeSwipeGesture" = 3;
+        "com.apple.trackpad.version" = 5;
+    };
+    "com.adobe.crashreporter" =     {
+        email = "";
+    };
+    "com.adobe.headlightscc" =     {
+        UniqueID = "714043EC-474E-4697-B53A-711663871C1A";
+    };
+    "com.apple.AMPLibraryAgent" =     {
+        "pref:200:Machine Preferences" = {length = 4952, bytes = 0x00000001 00000000 00000000 00000000 ... df258701 17e47885 };
+    };
+    "com.apple.AOSKit.RegInfo" =     {
+        lastComputerName = "Richard's MacBook Pro";
+        lastRegAllTime = "Sunday, 18 September 2022 at 07:01:28 Central European Summer Time";
+        ttlSeconds = 473848;
+    };
+    "com.apple.AOSPushRelay.TopicInfo" =     {
+        production = 2;
+    };
+    "com.apple.Bluetooth" =     {
+        BluetoothVersionNumber = 3;
+        FavoriteDevices =         (
+            "fc-b6-d8-66-42-b2",
+            "88-63-df-86-27-ef"
+        );
+        IDSPairedDevices =         (
+            "fc-b6-d8-66-42-b2",
+            "f4-5c-89-9c-fd-2c"
+        );
+        RecentDevices =         {
+            "10-02-b5-bc-b7-94" = "2020-01-14 08:16:46 +0000";
+            "18-f1-d8-3d-cf-d2" = "2021-06-25 11:37:37 +0000";
+            "40-4b-47-35-b1-f7" = "2021-10-19 11:47:46 +0000";
+            "42-0c-66-11-4e-25" = "2021-01-15 14:30:47 +0000";
+            "44-1b-88-dc-ff-01" = "2022-02-20 15:29:25 +0000";
+            "44-5f-6b-ac-86-29" = "2021-10-14 11:10:29 +0000";
+            "4d-8c-23-78-9b-ad" = "2021-01-15 14:41:12 +0000";
+            "50-1e-ee-fc-17-b5" = "2021-10-17 17:46:38 +0000";
+            "5d-76-8c-fc-49-03" = "2020-02-16 11:29:54 +0000";
+            "64-a6-51-e0-da-01" = "2020-11-24 12:16:11 +0000";
+            "65-ec-85-04-c6-14" = "2021-02-05 15:57:18 +0000";
+            "6e-67-64-5c-71-74" = "2021-10-14 15:58:32 +0000";
+            "74-f5-c0-e7-66-59" = "2020-10-02 14:57:39 +0000";
+            "75-14-31-9e-40-8e" = "2020-10-02 14:57:03 +0000";
+            "88-63-df-86-27-ef" = "2022-01-02 14:54:07 +0000";
+            "98-52-3d-a7-0b-21" = "2022-02-12 08:26:18 +0000";
+            "b8-69-c2-40-0c-5a" = "2022-02-18 14:02:49 +0000";
+            "d0-d5-1b-a9-a7-28" = "2021-05-29 11:12:54 +0000";
+            "ea-42-25-f8-8f-22" = "2021-07-13 11:34:36 +0000";
+            "f4-5c-89-9c-fd-2c" = "2022-02-20 13:04:49 +0000";
+            "fc-b6-d8-66-42-b2" = "2022-02-17 13:57:43 +0000";
+        };
+    };
+    "com.apple.DigitalColorMeter2" =     {
+        colorSpace = 2;
+    };
+    "com.apple.FaceTime" =     {
+        ConfigurationDownloadDate = "2020-10-23 14:53:43 +0000";
+        LastSignedInID = "richard.vd.oost@gmail.com";
+        LearnMoreURLs =         {
+            ca = "http://www.apple.com/ca/mac/facetime/";
+            da = "http://www.apple.com/dk/mac/facetime/";
+            de = "http://www.apple.com/de/mac/facetime/";
+            default = "http://www.apple.com/mac/facetime/";
+            en = "http://www.apple.com/mac/facetime/";
+            "en-AU" = "http://www.apple.com/au/mac/facetime/";
+            "en-GB" = "http://www.apple.com/uk/mac/facetime/";
+            es = "http://www.apple.com/es/mac/facetime/";
+            fi = "http://www.apple.com/fi/mac/facetime/";
+            fr = "http://www.apple.com/fr/mac/facetime/";
+            id = "http://www.apple.com/id/mac/facetime/";
+            it = "http://www.apple.com/it/mac/facetime/";
+            ja = "http://www.apple.com/jp/mac/facetime/";
+            ko = "http://www.apple.com/kr/mac/facetime/";
+            mx = "http://www.apple.com/mx/mac/facetime/";
+            nb = "http://www.apple.com/no/mac/facetime/";
+            nl = "http://www.apple.com/nl/mac/facetime/";
+            pl = "http://www.apple.com/pl/mac/facetime/";
+            pt = "http://www.apple.com/br/mac/facetime/";
+            "pt-PT" = "http://www.apple.com/pt/mac/facetime/";
+            ru = "http://www.apple.com/ru/mac/facetime/";
+            sv = "http://www.apple.com/se/mac/facetime/";
+            th = "http://www.apple.com/th/mac/facetime/";
+            tr = "http://www.apple.com/tr/mac/facetime/";
+            "zh-Hans" = "http://www.apple.com/cn/mac/facetime/";
+            "zh-Hant" = "http://www.apple.com/tw/mac/facetime/";
+        };
+        PreferredVideoDeviceUID = 0x8020000005ac8514;
+        RecentsList =         (
+        );
+        RecentsVersion = 2;
+    };
+    "com.apple.MIDI" =     {
+        CurrentSetupFilename = Default;
+        MIDISetup =         {
+            devices =             (
+                                {
+                    "apple.midirtp.errors" = {length = 0, bytes = 0x};
+                    driver = "com.apple.AppleMIDIRTPDriver";
+                    entities =                     (
+                    );
+                    image = "/System/Library/Extensions/AppleMIDIRTPDriver.plugin/Contents/Resources/RTPDriverIcon.tiff";
+                    manufacturer = "";
+                    model = "";
+                    name = Network;
+                    offline = 0;
+                    scheduleAheadMuSec = 50000;
+                    uniqueID = 102048703;
+                },
+                                {
+                    "apple.midi.audiomidisetup.widget.xPosition" = 54;
+                    "apple.midi.audiomidisetup.widget.yPosition" = 23;
+                    driver = "com.apple.AppleMIDIIACDriver";
+                    entities =                     (
+                                                {
+                            destinations =                             (
+                                                                {
+                                    uniqueID = 1472056665;
+                                }
+                            );
+                            embedded = 1;
+                            maxSysExSpeed = 3125;
+                            name = "Bus 1";
+                            protocol = 2;
+                            sources =                             (
+                                                                {
+                                    uniqueID = "-1204744401";
+                                }
+                            );
+                            uniqueID = 1266975814;
+                        }
+                    );
+                    image = "/System/Library/Extensions/AppleMIDIIACDriver.plugin/Contents/Resources/IACDriverIcon.tiff";
+                    manufacturer = "Apple Inc.";
+                    model = "IAC Driver";
+                    name = "IAC Driver";
+                    offline = 1;
+                    uniqueID = 1515259438;
+                },
+                                {
+                    "Bluetooth Advertising Name" = "Richard\\U2019s MacBook Pro";
+                    driver = "com.apple.AppleMIDIBluetoothDriver";
+                    entities =                     (
+                    );
+                    image = "/System/Library/Extensions/AppleMIDIBluetoothDriver.plugin/Contents/Resources/BluetoothDeviceSetupIcon.tif";
+                    "is BLE MIDI null device" = 1;
+                    manufacturer = "Apple Inc.";
+                    model = "Bluetooth MIDI Driver";
+                    name = Bluetooth;
+                    offline = 1;
+                    uniqueID = 1594413678;
+                }
+            );
+        };
+    };
+    "com.apple.ManagedClient" =     {
+        MigratedShareKitPayloads = 1;
+    };
+    "com.apple.Music" =     {
+        "pref:200:Machine Preferences" = {length = 4952, bytes = 0x00000001 00000000 00000000 00000000 ... 59a8659a e13ecb8d };
+        "watched-folder-url" = "file:///Users/richard/Music/Music/Media.localized/Automatically%20Add%20to%20Music.localized/";
+    };
+    "com.apple.Notes" =     {
+        uuid = "F10FAD1A-7B57-4737-B71F-EE6484C4AC2E";
+    };
+    "com.apple.Notes.SharingExtension" =     {
+        uuid = "6E9C6019-DF08-4BA4-9F67-9A622FD19358";
+    };
+    "com.apple.QuickLookDaemon" =     {
+        "Last Mod Date For /Library/QuickLook" = 1661331579;
+        "Last Mod Date For /System/Library/QuickLook" = 1661331579;
+        "Last Mod Date For ~/Library/QuickLook" = 1655970592;
+    };
+    "com.apple.SafariUserAccountUpdater" =     {
+        DidPromptSearchEngineAlert = 1;
+    };
+    "com.apple.TV" =     {
+        "pref:200:Machine Preferences" = {length = 4952, bytes = 0x00000001 00000000 00000000 00000000 ... f14f2818 328c8ecb };
+        "watched-folder-url" = "file:///Users/richard/Music/iTunes/iTunes%20Media/Automatically%20Add%20to%20TV.localized/";
+    };
+    "com.apple.accessibility.universalAccessAuthWarn" =     {
+        "hwcheck-cache-com.apple.ClassroomSettings" = 1;
+        "hwcheck-cache-com.apple.preference.battery" = 0;
+        "hwcheck-cache-com.apple.preferences.ClassKitPreferencePane" = 1;
+        "hwcheck-cache-com.apple.preferences.EnergySaverPrefPane" = 1;
+        "hwcheck-cache-com.apple.preferences.configurationprofiles" = 1;
+        "hwcheck-cache-com.apple.preferences.password" = 0;
+        "hwcheck-cache-com.apple.preferences.wallet" = 0;
+        "hwcheck-cache-com.apple.prefpanel.fibrechannel" = 1;
+    };
+    "com.apple.commcenter.csidata" =     {
+        BootTime = 0x63285126;
+        CommCenterStartsThisBoot = 0x1;
+        "TraceModuleExtreme::CSILog:fEnabled" = 0x0;
+        "TraceModuleExtreme::CSILog:fHistory" = 0xffffffff;
+        VoWiFiLocationEvaluated = 0x1;
+        WifiCallingLocationAuthorizationStatus = 0x2;
+    };
+    "com.apple.configurationprofiles.user" =     {
+        LastCheckForExpiringProfiles = "2022-09-19 15:35:31 +0000";
+        "Workaround_22455316" = "2022-09-20 11:28:43 +0000";
+    };
+    "com.apple.controlcenter" =     {
+        Battery = 18;
+        Bluetooth = 18;
+        Clock = 18;
+        Sound = 18;
+        UserSwitcher = 18;
+        WiFi = 18;
+    };
+    "com.apple.desktop" =     {
+        "main-reset" = 1;
+    };
+    "com.apple.dock" =     {
+        LaunchPadDBName = "C06F2C14-F350-4194-9048-C5EDA0E19E77";
+    };
+    "com.apple.finder" =     {
+    };
+    "com.apple.iChat.AIM" =     {
+        Status =         {
+            "Discontinued-AIM" =             {
+                FZPersonEmail = "richard@vanderoost.com";
+                FZPersonFirstName = Richard;
+                FZPersonLastName = "van der Oost";
+                FZPersonStatus = 4;
+            };
+        };
+    };
+    "com.apple.iChat.Jabber" =     {
+        Status =         {
+            "Discontinued-Jabber" =             {
+                FZPersonEmail = "richard@vanderoost.com";
+                FZPersonFirstName = Richard;
+                FZPersonLastName = "van der Oost";
+                FZPersonStatus = 4;
+            };
+        };
+    };
+    "com.apple.iChat.SubNet" =     {
+        Accounts =         {
+            "Discontinued-SubNet" =             {
+            };
+        };
+        ActiveAccounts =         (
+        );
+        OnlineAccounts =         (
+        );
+        Status =         {
+            "Discontinued-SubNet" =             {
+                FZPersonEmail = "richard@vanderoost.com";
+                FZPersonFirstName = Richard;
+                FZPersonLastName = "van der Oost";
+                FZPersonStatus = 4;
+            };
+        };
+    };
+    "com.apple.iTunes" =     {
+        "iTunes Location" = {length = 724, bytes = 0x626f6f6b d4020000 00000410 30000000 ... 40010000 00000000 };
+        "pref:200:Machine Preferences" = {length = 4944, bytes = 0x00000001 00000000 00000000 00000000 ... 05c28f25 a53e1c47 };
+        "watched-folder-url" = "file:///Users/richard/Music/iTunes/iTunes%20Media/Automatically%20Add%20to%20iTunes.localized/";
+    };
+    "com.apple.identityservices.idstatuscache" =     {
+        CacheVersion = 1;
+        "com.apple.ess" =         {
+            "mailto:chris@glamandglits.com" =             {
+                IDStatus = 2;
+                LookupDate = "603057163.0852031";
+            };
+            "mailto:marc.kuipers@placeforbizz.nl" =             {
+                IDStatus = 2;
+                LookupDate = "602714812.375998";
+            };
+            "mailto:raviswami57@gmail.com" =             {
+                IDStatus = 2;
+                LookupDate = "600976567.248667";
+            };
+            "mailto:richardvdoost+ovffstambsrkcvqfx5ya@boards.trello.com" =             {
+                IDStatus = 2;
+                LookupDate = "602861029.933504";
+            };
+            "mailto:tgluck@hhai.org" =             {
+                IDStatus = 2;
+                LookupDate = "600271677.186867";
+            };
+            "tel:+31206895233" =             {
+                IDStatus = 2;
+                LookupDate = "603373055.979147";
+            };
+            "tel:+31588001990" =             {
+                IDStatus = 2;
+                LookupDate = "600281961.532414";
+            };
+            "tel:+31616108273" =             {
+                IDStatus = 2;
+                LookupDate = "603373055.979147";
+            };
+            "tel:+31621106012" =             {
+                IDStatus = 1;
+                LookupDate = "602714812.375998";
+            };
+            "tel:+31642732432" =             {
+                IDStatus = 2;
+                LookupDate = "601741583.548182";
+            };
+            "tel:+31652534378" =             {
+                IDStatus = 1;
+                LookupDate = "603373055.979147";
+            };
+            "tel:+31653186164" =             {
+                IDStatus = 2;
+                LookupDate = "600281961.532414";
+            };
+            "tel:+31657936768" =             {
+                IDStatus = 2;
+                LookupDate = "602533645.085474";
+            };
+            "tel:+31702212121" =             {
+                IDStatus = 2;
+                LookupDate = "600281961.532414";
+            };
+        };
+        "com.apple.madrid" =         {
+            "mailto:marc.kuipers@placeforbizz.nl" =             {
+                IDStatus = 2;
+                LookupDate = "602714812.1046849";
+            };
+            "mailto:richard.vd.oost@gmail.com" =             {
+                IDStatus = 1;
+                LookupDate = "603289709.430889";
+                ValidExpiry = "604799.9583939314";
+            };
+            "mailto:richardvdoost@icloud.com" =             {
+                IDStatus = 1;
+                LookupDate = "601926326.790303";
+                ValidExpiry = "28799.98966097832";
+            };
+            "tel:+31206895233" =             {
+                IDStatus = 2;
+                LookupDate = "603373055.310234";
+            };
+            "tel:+31616108273" =             {
+                IDStatus = 2;
+                LookupDate = "603373055.329471";
+            };
+            "tel:+31621106012" =             {
+                IDStatus = 1;
+                LookupDate = "602714812.174613";
+                ValidExpiry = "28799.98446297646";
+            };
+            "tel:+31642732432" =             {
+                IDStatus = 2;
+                LookupDate = "601741581.5078599";
+            };
+            "tel:+31652534378" =             {
+                IDStatus = 1;
+                LookupDate = "603373055.327123";
+                ValidExpiry = "28799.99615001678";
+            };
+            "tel:+31657936768" =             {
+                IDStatus = 2;
+                LookupDate = "603289709.430889";
+            };
+        };
+        "com.apple.private.ac" =         {
+            "tel:+31588001990" =             {
+                IDStatus = 2;
+                LookupDate = "600281961.7391911";
+            };
+            "tel:+31653186164" =             {
+                IDStatus = 2;
+                LookupDate = "600281961.7391911";
+            };
+            "tel:+31702212121" =             {
+                IDStatus = 2;
+                LookupDate = "600281961.7391911";
+            };
+        };
+        "com.apple.private.alloy.applepay" =         {
+            "mailto:richardvdoost@icloud.com" =             {
+                IDStatus = 1;
+                LookupDate = "602956245.360272";
+            };
+        };
+        "com.apple.private.alloy.facetime.multi" =         {
+            "mailto:richard.vd.oost@gmail.com" =             {
+                LookupDate = "602956281.695833";
+            };
+            "tel:+31588001990" =             {
+                IDStatus = 2;
+                LookupDate = "600281961.020505";
+            };
+            "tel:+31625276029" =             {
+                LookupDate = "603481936.429713";
+            };
+            "tel:+31653186164" =             {
+                IDStatus = 2;
+                LookupDate = "600281961.020505";
+            };
+            "tel:+31702212121" =             {
+                IDStatus = 2;
+                LookupDate = "600281961.020505";
+            };
+        };
+        "com.apple.private.alloy.icloudpairing" =         {
+            "mailto:richardvdoost@icloud.com" =             {
+                IDStatus = 1;
+                LookupDate = "602956241.4555171";
+            };
+        };
+        "com.apple.private.alloy.nearby" =         {
+            "mailto:annagrigorashd@gmail.com" =             {
+                IDStatus = 1;
+                LookupDate = "600066935.7935539";
+            };
+            "mailto:apple.com@gielboes.com" =             {
+                IDStatus = 1;
+                LookupDate = "602934715.813975";
+            };
+            "mailto:d.vos2@icloud.com" =             {
+                IDStatus = 1;
+                LookupDate = "600374022.83718";
+            };
+            "mailto:jarretelentertainment@gmail.com" =             {
+                IDStatus = 1;
+                LookupDate = "603018695.5653189";
+            };
+            "mailto:john.vanderoost@wur.nl" =             {
+                IDStatus = 1;
+                LookupDate = "600925555.016214";
+            };
+            "mailto:michael.levering@gmail.com" =             {
+                IDStatus = 1;
+                LookupDate = "603111877.344233";
+            };
+            "mailto:vbeerkens@gmail.com" =             {
+                IDStatus = 1;
+                LookupDate = "601487322.1933399";
+            };
+        };
+        "com.apple.private.alloy.phonecontinuity" =         {
+            "mailto:richardvdoost@icloud.com" =             {
+                IDStatus = 1;
+                LookupDate = "603289704.877979";
+            };
+        };
+        "com.apple.private.alloy.thumper.keys" =         {
+            "mailto:richardvdoost@icloud.com" =             {
+                IDStatus = 1;
+                LookupDate = "598950867.7064151";
+            };
+        };
+    };
+    "com.apple.identityservicesd" =     {
+        CheckedDuplicatedUniqueID = 1;
+    };
+    "com.apple.imservice.SMS" =     {
+        Accounts =         {
+            "1EF58D31-843D-4F9E-B05C-77F359BC6E7C" =             {
+                LoginAs = "E:";
+                canRelayMMS = 1;
+                canRelaySMS = 1;
+                isSMSRelayCapable = 1;
+            };
+        };
+        ActiveAccounts =         (
+            "1EF58D31-843D-4F9E-B05C-77F359BC6E7C"
+        );
+        OnlineAccounts =         (
+            "1EF58D31-843D-4F9E-B05C-77F359BC6E7C"
+        );
+        Status =         {
+            "1EF58D31-843D-4F9E-B05C-77F359BC6E7C" =             {
+                FZPersonFirstName = Richard;
+                FZPersonStatus = 4;
+            };
+        };
+    };
+    "com.apple.imservice.ids.FaceTime" =     {
+        Status =         {
+            "E7A79931-28CC-4C0D-9E3D-197865D42B64" =             {
+                FZPersonFirstName = Richard;
+                FZPersonStatus = 4;
+            };
+        };
+    };
+    "com.apple.imservice.ids.iMessage" =     {
+        Status =         {
+            "4EEC5AF5-EC9E-4C26-856E-63B5AE5667AC" =             {
+                FZPersonStatus = 4;
+            };
+        };
+    };
+    "com.apple.locationmenu" =     {
+    };
+    "com.apple.loginwindow" =     {
+    };
+    "com.apple.metrickitd" =     {
+        MXClientsAvailable = 0;
+    };
+    "com.apple.notificationcenterui" =     {
+        dndEnd = 300;
+        dndStart = 1200;
+        doNotDisturb = 0;
+    };
+    "com.apple.screencapture" =     {
+        "audio-id" = BuiltInMicrophoneDevice;
+    };
+    "com.apple.screencaptureui" =     {
+    };
+    "com.apple.screensaver" =     {
+        CleanExit = YES;
+        PrefsVersion = 100;
+        moduleDict =         {
+            moduleName = "Computer Name";
+            path = "/System/Library/Frameworks/ScreenSaver.framework/PlugIns/Computer Name.appex";
+            type = 0;
+        };
+        tokenRemovalAction = 0;
+    };
+    "com.apple.settings.storage" =     {
+        AppsSizer =         {
+            EventID = 732380693;
+            ItemSizes =             {
+                "/Applications/Adblock Plus.app/" = 12562432;
+                "/Applications/Adobe Audition 2020/Adobe Audition 2020.app/" = 1338441728;
+                "/Applications/Adobe Illustrator 2020/Adobe Illustrator.app/" = 1427300352;
+                "/Applications/AlDente.app/" = 22093824;
+                "/Applications/Audacity.app/" = 74964992;
+                "/Applications/Authy Desktop.app/" = 200400896;
+                "/Applications/Bitwarden.app/" = 350957568;
+                "/Applications/Blackmagic Cameras/Blackmagic Camera Setup.app/" = 50561024;
+                "/Applications/Blackmagic Cameras/Uninstall Cameras.app/" = 921600;
+                "/Applications/Blackmagic Proxy Generator.app/" = 1507328;
+                "/Applications/Blackmagic RAW/Blackmagic RAW Player.app/" = 162172928;
+                "/Applications/Blackmagic RAW/Blackmagic RAW Speed Test.app/" = 127082496;
+                "/Applications/Blender 2.79/blender.app/" = 315572224;
+                "/Applications/Blender 2.79/blenderplayer.app/" = 132923392;
+                "/Applications/Blender.app/" = 611270656;
+                "/Applications/Brave Browser.app/" = 281911296;
+                "/Applications/Cold Turkey Blocker.app/" = 32509952;
+                "/Applications/DaVinci Resolve/DaVinci Control Panels Setup.app/" = 50126848;
+                "/Applications/DaVinci Resolve/DaVinci Remote Monitoring.app/" = 91414528;
+                "/Applications/DaVinci Resolve/DaVinci Resolve.app/" = 4163219456;
+                "/Applications/DaVinci Resolve/Fairlight Studio Utility.app/" = 116002816;
+                "/Applications/DaVinci Resolve/Uninstall Resolve.app/" = 860160;
+                "/Applications/Discord.app/" = 193495040;
+                "/Applications/Docker.app/" = 1605373952;
+                "/Applications/Dropbox.app/" = 427266048;
+                "/Applications/Electron-Cash.app/" = 108244992;
+                "/Applications/Electrum.app/" = 98820096;
+                "/Applications/ElectrumSV.app/" = 81498112;
+                "/Applications/Firefox.app/" = 360095744;
+                "/Applications/Foxit PDF Reader.app/" = 79212544;
+                "/Applications/GitHub Desktop.app/" = 250441728;
+                "/Applications/Google Chrome.app/" = 930279424;
+                "/Applications/Google Docs.app/" = 106496;
+                "/Applications/Google Drive.app/" = 419328000;
+                "/Applications/Google Sheets.app/" = 102400;
+                "/Applications/Google Slides.app/" = 86016;
+                "/Applications/Hemingway Editor.app/" = 381734912;
+                "/Applications/IGdm.app/" = 230219776;
+                "/Applications/Keynote.app/" = 501514240;
+                "/Applications/Ledger Live.app/" = 1133301760;
+                "/Applications/Loom.app/" = 369725440;
+                "/Applications/LuLu.app/" = 20516864;
+                "/Applications/Messenger.app/" = 65323008;
+                "/Applications/MindNode.app/" = 61415424;
+                "/Applications/MySQLWorkbench.app/" = 205889536;
+                "/Applications/Nuke13.2v1/Hiero13.2v1.app/" = 434176;
+                "/Applications/Nuke13.2v1/HieroPlayer13.2v1.app/" = 450560;
+                "/Applications/Nuke13.2v1/Nuke13.2v1 Non-Commercial.app/" = 417792;
+                "/Applications/Nuke13.2v1/Nuke13.2v1.app/" = 4504526848;
+                "/Applications/Nuke13.2v1/NukeAssist13.2v1.app/" = 417792;
+                "/Applications/Nuke13.2v1/NukeIndie13.2v1.app/" = 552960;
+                "/Applications/Nuke13.2v1/NukeStudio13.2v1 Non-Commercial.app/" = 458752;
+                "/Applications/Nuke13.2v1/NukeStudio13.2v1.app/" = 458752;
+                "/Applications/Nuke13.2v1/NukeX13.2v1 Non-Commercial.app/" = 454656;
+                "/Applications/Nuke13.2v1/NukeX13.2v1.app/" = 454656;
+                "/Applications/Numbers.app/" = 399859712;
+                "/Applications/OBS.app/" = 375582720;
+                "/Applications/Pages.app/" = 434524160;
+                "/Applications/PhpStorm.app/" = 758345728;
+                "/Applications/Postman.app/" = 509112320;
+                "/Applications/Rectangle.app/" = 30674944;
+                "/Applications/Shazam.app/" = 10387456;
+                "/Applications/Signal.app/" = 358633472;
+                "/Applications/Skype.app/" = 293117952;
+                "/Applications/Slack.app/" = 224382976;
+                "/Applications/Spotify.app/" = 281387008;
+                "/Applications/Telegram.app/" = 84156416;
+                "/Applications/The Unarchiver.app/" = 17625088;
+                "/Applications/Transmission.app/" = 13996032;
+                "/Applications/Utilities/Adobe Application Manager/IPC/AdobeIPCBroker.app/" = 565248;
+                "/Applications/Utilities/Adobe Application Manager/LWA/adobe_licutil.app/" = 2179072;
+                "/Applications/Utilities/Adobe Application Manager/P7/AASIapp.app/" = 487424;
+                "/Applications/Utilities/Adobe Application Manager/UWA/LogTransport2.app/" = 913408;
+                "/Applications/Utilities/Adobe Creative Cloud Experience/CCXProcess/CCXProcess.app/" = 57929728;
+                "/Applications/Utilities/Adobe Creative Cloud/ACC/Creative Cloud Helper.app/" = 1896448;
+                "/Applications/Utilities/Adobe Creative Cloud/ACC/Creative Cloud.app/" = 20443136;
+                "/Applications/Utilities/Adobe Creative Cloud/Utils/CC Troubleshooter.app/" = 1699840;
+                "/Applications/Utilities/Adobe Creative Cloud/Utils/Creative Cloud Desktop App.app/" = 1650688;
+                "/Applications/Utilities/Adobe Creative Cloud/Utils/Creative Cloud Installer.app/" = 3211264;
+                "/Applications/Utilities/Adobe Creative Cloud/Utils/Creative Cloud Uninstaller.app/" = 2527232;
+                "/Applications/Utilities/Adobe Sync/CoreSync/Core Sync.app/" = 84992000;
+                "/Applications/Utilities/Adobe Sync/CoreSyncExtension/ACCFinderBundleLoader.app/" = 12902400;
+                "/Applications/VLC.app/" = 141963264;
+                "/Applications/VirtualBox.app/" = 248143872;
+                "/Applications/Visual Studio Code.app/" = 298356736;
+                "/Applications/WeChat.app/" = 168902656;
+                "/Applications/WhatsApp.app/" = 133062656;
+                "/Applications/iLok License Manager.app/" = 68763648;
+                "/Applications/iTerm.app/" = 74674176;
+                "/Applications/net.downloadhelper.coapp.app/" = 85880832;
+                "/Applications/zoom.us.app/" = 171388928;
+                "/Users/richard/Dropbox/Personal/programming/React/codecademy-app/node_modules/node-notifier/vendor/terminal-notifier.app/" = 0;
+                "/Users/richard/Dropbox/Personal/programming/React/counter-app/node_modules/node-notifier/vendor/terminal-notifier.app/" = 0;
+                "/Users/richard/Dropbox/Personal/programming/React/ravenous/node_modules/node-notifier/vendor/terminal-notifier.app/" = 0;
+            };
+        };
+        CacheVersion = 1;
+        TrashSizer =         {
+            EventID = 196705534;
+            ItemSizes =             {
+                "/Users/richard/.Trash/20080904_NOKIA_ORIGINAL_REAL_TUNE_yq0EmbY3XyI.webm" = 430080;
+                "/Users/richard/.Trash/2022-08-18_056_1513_UP_3_ultra-protect-pro.obj" = 17977344;
+                "/Users/richard/.Trash/Chrome Apps.localized/" = 2154496;
+                "/Users/richard/.Trash/FZRandomizer_3_0_3.py" = 139264;
+                "/Users/richard/.Trash/FoundryLicensing/" = 0;
+                "/Users/richard/.Trash/Lunar.dmg" = 19042304;
+                "/Users/richard/.Trash/Nokia.m4r" = 86016;
+                "/Users/richard/.Trash/ParlAI/" = 96436224;
+                "/Users/richard/.Trash/Screen Shot 2022-08-16 at 13.32.16.png" = 73728;
+                "/Users/richard/.Trash/Screen Shot 2022-08-16 at 13.37.04.png" = 659456;
+                "/Users/richard/.Trash/Screen Shot 2022-08-16 at 13.37.46.png" = 221184;
+                "/Users/richard/.Trash/Screen Shot 2022-08-16 at 14.20.25.png" = 200704;
+                "/Users/richard/.Trash/Screen Shot 2022-08-16 at 14.22.33.png" = 692224;
+                "/Users/richard/.Trash/Screen Shot 2022-08-16 at 14.25.01.png" = 466944;
+                "/Users/richard/.Trash/Screen Shot 2022-08-16 at 14.25.17.png" = 135168;
+                "/Users/richard/.Trash/Screen Shot 2022-08-16 at 19.43.38.png" = 1282048;
+                "/Users/richard/.Trash/Screen Shot 2022-08-17 at 00.58.54.png" = 3473408;
+                "/Users/richard/.Trash/Screen Shot 2022-08-17 at 00.59.30.png" = 3469312;
+                "/Users/richard/.Trash/Screen Shot 2022-08-17 at 16.44.48.png" = 110592;
+                "/Users/richard/.Trash/Screen Shot 2022-08-17 at 16.48.42.png" = 90112;
+                "/Users/richard/.Trash/Screen Shot 2022-08-17 at 18.32.11.png" = 172032;
+                "/Users/richard/.Trash/Screen Shot 2022-08-18 at 17.48.37.png" = 45056;
+                "/Users/richard/.Trash/Screen Shot 2022-08-19 at 13.05.28.png" = 233472;
+                "/Users/richard/.Trash/allow-shutdown" = 4096;
+                "/Users/richard/.Trash/blender-3.2.2-macos-x64.dmg" = 230854656;
+                "/Users/richard/.Trash/canvas-01-01-01.mp4" = 1495040;
+                "/Users/richard/.Trash/cleanup-nodes.sh" = 4096;
+                "/Users/richard/.Trash/conceptenleveringencertificeringvanaandelen3dmouthgua.zip" = 1654784;
+                "/Users/richard/.Trash/dwhelper/" = 8192;
+                "/Users/richard/.Trash/error_log.txt" = 8192;
+                "/Users/richard/.Trash/finished-job-uuids.txt" = 57344;
+                "/Users/richard/.Trash/indonesi\\U00eb.eml" = 6332416;
+                "/Users/richard/.Trash/integrity-check.json" = 4096;
+                "/Users/richard/.Trash/intelephense/" = 0;
+                "/Users/richard/.Trash/invoice.pdf" = 24576;
+                "/Users/richard/.Trash/merc project.zip" = 694116352;
+                "/Users/richard/.Trash/merc project/" = 1888706560;
+                "/Users/richard/.Trash/mpv-watch?v=0gC-h7Yqka4-0001.png" = 962560;
+                "/Users/richard/.Trash/mpv-watch?v=HzbpXNeng8Y-0001.png" = 700416;
+                "/Users/richard/.Trash/mpv-watch?v=exQUK0IRbhE-0001.png" = 139264;
+                "/Users/richard/.Trash/mpv-watch?v=exQUK0IRbhE-0002.png" = 876544;
+                "/Users/richard/.Trash/mpv-watch?v=p1BOefeatsw-0001.png" = 90112;
+                "/Users/richard/.Trash/node-ips.txt" = 4096;
+                "/Users/richard/.Trash/node-shutdown-old" = 4096;
+                "/Users/richard/.Trash/parse-render-nodes.py" = 4096;
+                "/Users/richard/.Trash/projects_891b768f-42a5-4403-a88a-c1e717c80015_frames_frame-0079.exr" = 18841600;
+                "/Users/richard/.Trash/render-nodes.json" = 8192;
+                "/Users/richard/.Trash/test.wav" = 15044608;
+                "/Users/richard/.Trash/wetransfer_img_6410-mov_2022-07-28_1954/" = 958074880;
+                "/Volumes/Seagate Expansion/.Trashes/502/Blendergrid/" = 159299960832;
+                "/Volumes/Seagate Expansion/.Trashes/502/Free Guy (2021) [2160p] [4K] [WEB] [5.1] [YTS.MX]/" = 5774467072;
+                "/Volumes/Seagate Expansion/.Trashes/502/Jumanji Welcome To The Jungle (2017)/" = 2052104192;
+                "/Volumes/Seagate Expansion/.Trashes/502/RenderBucket/" = 6121422848;
+                "/Volumes/Seagate Expansion/.Trashes/502/wetransfer-b99399/" = 0;
+            };
+        };
+    };
+    "com.apple.sharingd" =     {
+        AppleIDAccount = {length = 6446, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000017b6 };
+        AppleIDAgentMetaInfo = {length = 603, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000001c1 };
+        StreamID = 5BBAD6068CFF;
+    };
+    "com.apple.soundpref" =     {
+        AlertsUseMainDevice = 0;
+    };
+    "com.apple.syncservices" =     {
+    };
+    "com.apple.systempreferences" =     {
+        StartupDiskSystemFolderCache =         (
+            "/System/Library/CoreServices"
+        );
+        "hwcheck-cache-com.apple.ClassroomSettings" = 1;
+        "hwcheck-cache-com.apple.preference.battery" = 0;
+        "hwcheck-cache-com.apple.preference.ink" = 1;
+        "hwcheck-cache-com.apple.preference.sidecar" = 0;
+        "hwcheck-cache-com.apple.preferences.ClassKitPreferencePane" = 1;
+        "hwcheck-cache-com.apple.preferences.EnergySaverPrefPane" = 1;
+        "hwcheck-cache-com.apple.preferences.configurationprofiles" = 1;
+        "hwcheck-cache-com.apple.preferences.password" = 0;
+        "hwcheck-cache-com.apple.preferences.wallet" = 0;
+        "hwcheck-cache-com.apple.prefpanel.fibrechannel" = 1;
+    };
+    "com.authy.authy-mac.ShipIt" =     {
+    };
+    "com.github.GitHubClient.ShipIt" =     {
+    };
+    "com.hnc.Discord.ShipIt" =     {
+    };
+    "com.ifedapoolarewaju.desktop.igdm.ShipIt" =     {
+    };
+    "com.ledger.live.ShipIt" =     {
+    };
+    "com.loom.desktop.ShipIt" =     {
+    };
+    "com.microsoft.VSCode.ShipIt" =     {
+    };
+    "com.postmanlabs.mac.ShipIt" =     {
+    };
+    "com.skype.skype.ShipIt" =     {
+    };
+    "com.tinyspeck.slackmacgap.ShipIt" =     {
+    };
+    "org.whispersystems.signal-desktop.ShipIt" =     {
+    };
+}

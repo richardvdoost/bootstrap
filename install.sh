@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script will run on its own from a curl one liner, will clone the rest of
+# the repo into a proper location
+
 abort() {
   printf "%s\n" "$@" >&2
   exit 1
@@ -11,15 +14,35 @@ then
   abort "Bash is required to interpret this script."
 fi
 
-exit 0
+echo "Bootstrapping this Mac on autopilot"
 
-# Install Command Line Tools (CLT) for Xcode
-xcode-select --install
+# Ask password upfront and keep alive
+# https://github.com/joshukraine/mac-bootstrap/blob/master/bootstrap#L88
+echo "Please authenticate"
+sudo -v
+while true; do
+    sudo -n true
+    sleep 60
+    kill -0 "$$" || exit
+done 2>/dev/null &
 
-# Automatically agree to the Xcode licence
+# Install Command Line Tools (CLT) for Xcode if needed
+if ! xcode-select -v &> /dev/null; then
+    echo "Installing XCode Commad Line Tools..."
+    xcode-select --install
+    sudo xcodebuild -license accept
+else
+    echo "XCode Commad Line Tools were already installed"
+fi
 
 # Install Brew
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! command -v brew &> /dev/null; then
+    echo "Installing Homebrew..."
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+    echo "Homebrew was already installed - Updating..."
+    brew update
+fi
 
 # Clone some important repositories
 
