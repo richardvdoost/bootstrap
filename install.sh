@@ -82,7 +82,6 @@ brew bundle --file "$BOOTSTRAP_DIR/Brewfile"
 
 : Remove outdated versions from the cellar including casks
 brew cleanup
-brew prune
 
 : Set all preferences and setup the Dock
 cd "$BOOTSTRAP_DIR"
