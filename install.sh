@@ -29,11 +29,10 @@ then
   abort "Bash is required to interpret this script."
 fi
 
-green_echo "STARTING MAC SETUP"; echo
-echo "This script will set up command line tools, ssh, git,"
-echo "install all homebrew packages from the Brewfile,"
-echo "set up the Mac preferences, and App preferences."
-echo "And finally restart."
+green_echo "STARTING MAC SETUP SCRIPT"
+echo "This script will set up command line tools, ssh, git, install all homebrew"
+echo "packages from the Brewfile, set up the Mac preferences and App preferences."
+echo "To reflect all changes in preferences, at the end the system will restart."
 
 # Ask password upfront and keep alive
 # https://github.com/joshukraine/mac-bootstrap/blob/master/bootstrap#L88
@@ -71,6 +70,7 @@ if [ ! -f "$ID_RSA_FILE" ]; then
 fi
 
 green_echo "CHECKING GITHUB SSH ACCESS"
+ssh-keyscan github.com >> "$SSH_DIR/known_hosts"
 if ! ssh -T git@github.com 2>&1 | grep 'success' &> /dev/null; then
 	GITHUB_SSH=false
 	echo "No access, SSH key needs to be set up at github.com"
