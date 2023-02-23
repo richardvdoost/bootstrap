@@ -76,13 +76,3 @@ defaults write com.apple.TextEdit "RichText" -bool "false"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFIG_HOME/iterm2"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-
-# Make iTerm2 icon look clean (swag the Mac Terminal icon)
-sudo cp /Applications/iTerm.app/Contents/Resources/AppIcon.icns /Applications/iTerm.app/Contents/Resources/_AppIcon.icns_orig
-sudo cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Terminal.icns /Applications/iTerm.app/Contents/Resources/AppIcon.icns
-sudo rm -rfv /Library/Caches/com.apple.iconservices.store
-sudo find /private/var/folders/ \( -name com.apple.dock.iconcache -or -name com.apple.iconservices \) -exec rm -rfv {} \;
-sleep 5
-sudo touch /Applications/iTerm.app 
-sudo killall Dock
-sudo killall Finder

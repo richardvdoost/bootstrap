@@ -1671,6 +1671,12 @@
         "options": {
           "full_name": "figma"
         }
+      },
+      "aldente": {
+        "version": "1.20",
+        "options": {
+          "full_name": "aldente"
+        }
       }
     },
     "mas": {
