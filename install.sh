@@ -50,7 +50,7 @@ sudo xcode-select --switch /Library/Developer/CommandLineTools # Enable command 
 
 : Accept the Xcode/iOS license agreement
 if ! $(sudo xcodebuild -license status); then
-  sudo xcodebuild -license accept
+  sudo xcodebuild -license accept || echo
 fi
 
 : Clone this repo
