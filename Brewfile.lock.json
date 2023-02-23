@@ -1653,6 +1653,24 @@
         "options": {
           "full_name": "font-sf-mono"
         }
+      },
+      "authy": {
+        "version": "2.2.3",
+        "options": {
+          "full_name": "authy"
+        }
+      },
+      "dropbox": {
+        "version": "168.4.4802",
+        "options": {
+          "full_name": "dropbox"
+        }
+      },
+      "figma": {
+        "version": "116.6.3",
+        "options": {
+          "full_name": "figma"
+        }
       }
     },
     "mas": {

@@ -78,6 +78,6 @@ defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFI
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Make iTerm2 icon look clean (swag the Mac Terminal icon)
-cp /Applications/iTerm.app/Contents/Resources/AppIcon.icns /Applications/iTerm.app/Contents/Resources/AppIcon.icns.orig
-cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Terminal.icns /Applications/iTerm.app/Contents/Resources/AppIcon.icns
+sudo cp /Applications/iTerm.app/Contents/Resources/AppIcon.icns /Applications/iTerm.app/Contents/Resources/AppIcon.icns.orig
+sudo cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Terminal.icns /Applications/iTerm.app/Contents/Resources/AppIcon.icns
 

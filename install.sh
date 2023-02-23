@@ -156,4 +156,4 @@ cd "$HOME"
 # TODO Set up cron jobs
 
 green_echo "ALL DONE - REBOOTING"
-sudo reboot
+# sudo reboot
