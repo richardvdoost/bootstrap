@@ -10,7 +10,7 @@
 
 # Keyboard remapping launch file
 mkdir -p "$HOME/Library/LaunchAgents"
-mv com.local.KeyRemapping.plist "$HOME/Library/LaunchAgents/com.local.KeyRemapping.plist"
+cp com.local.KeyRemapping.plist "$HOME/Library/LaunchAgents/com.local.KeyRemapping.plist"
 
 
 

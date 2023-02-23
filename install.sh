@@ -1,96 +1,159 @@
 #!/bin/bash
 
-# This script will run on its own from a curl one liner, will clone the rest of
+# This script can run from a curl one-liner, will clone the rest of
 # the repo into a proper location
 
-set -euxo pipefail
+# Settings
+HOSTNAME="mp-pro"
+GITHUB_USERNAME="richardvdoost"
+BOOTSTRAP_REPO_NAME="bootstrap"
 
+SSH_DIR="$HOME/.ssh"
 GIT_DIR="$HOME/git"
-BOOTSTRAP_DIR="$GIT_DIR/bootstrap"
+
+set -eu
+
+# Utils
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+green_echo()(echo; echo -e "==> ${GREEN}$1${NC}")
 
 abort() {
   printf "%s\n" "$@" >&2
   exit 1
 }
 
-# TODO: Use caffeinate to keep it awake
-
-# Fail fast with a concise message when not using bash
+# Fail when not using bash
 if [ -z "${BASH_VERSION:-}" ]
 then
   abort "Bash is required to interpret this script."
 fi
 
-echo "Bootstrapping this Mac on autopilot"
+green_echo "STARTING MAC SETUP"; echo
 
 # Ask password upfront and keep alive
 # https://github.com/joshukraine/mac-bootstrap/blob/master/bootstrap#L88
-echo "Please authenticate"
 sudo -v
-while true; do
+while :; do
     sudo -n true
     caffeinate -id sleep 60
     kill -0 "$$" || exit
 done 2>/dev/null &
 
-: Install all available updates
+green_echo "INSTALL ALL AVAILABLE UPDATES"
 sudo softwareupdate -ia --verbose
 
-: Install Xcode Command Line Tools
+# Install Xcode command line tools
 if ! $(xcode-select -p &>/dev/null); then
     xcode-select --install &>/dev/null
-
-    : Wait until the Xcode Command Line Tools are installed
+    # Wait until the Xcode command line tools are installed
     until $(xcode-select -p &>/dev/null); do
-        sleep 10
+        sleep 5
     done
+
+    # Enable command line tools
+    sudo xcode-select --switch /Library/Developer/CommandLineTools
 fi
 
-sudo xcode-select --switch /Library/Developer/CommandLineTools # Enable command line tools
+# Set the computer hostname
+sudo scutil --set HostName $HOSTNAME
 
-: Accept the Xcode/iOS license agreement
-if ! $(sudo xcodebuild -license status); then
-  sudo xcodebuild -license accept || echo
+# Ensure we have SSH keys
+mkdir -p "$SSH_DIR"
+ID_RSA_FILE="$SSH_DIR/id_rsa"
+if [ ! -f "$ID_RSA_FILE" ]; then
+	green_echo "CREATING NEW SSH KEYS"
+	ssh-keygen -b 4096 -t rsa -f "$ID_RSA_FILE" -q -N ""
 fi
 
-: Clone / refresh this repo
-mkdir -p "$GIT_DIR"
-rm -r "$GIT_DIR/bootstrap" || echo
-cd "$GIT_DIR"
-git clone https://github.com/richardvdoost/bootstrap
-cd $HOME
+green_echo "CHECKING GITHUB SSH ACCESS"
+if ! ssh -T git@github.com 2>&1 | grep 'success' &> /dev/null; then
+	GITHUB_SSH=false
+	echo "No access, SSH key needs to be set up at github.com"
+	pbcopy < "$ID_RSA_FILE.pub"
+	open "https://github.com/settings/ssh/new"
+	say "Log into Github and paste the public SSH key please"
+else
+	GITHUB_SSH=true
+	echo "All good"
+fi
 
-: Install Brew
+green_echo "CHECK HOMEBREW STATUS"
 if ! command -v brew &> /dev/null; then
-    echo "Installing Homebrew..."
-    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	echo "Installing Homebrew..."
+	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+	# Add Brew to the path
+	if ! command -v brew &> /dev/null; then
+		eval "$(/opt/homebrew/bin/brew shellenv)"
+	fi
+else
+	echo "All good"
 fi
 
-: Add Brew to the path for Mac ARM
-if ! command -v brew &> /dev/null; then
-    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "$HOME/.zprofile"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
-: Install Homebrew Bundle
+# Install Homebrew Bundle
+green_echo "INSTALL HOMEBREW BUNDLE"
 brew tap Homebrew/bundle
 brew update
 brew upgrade
 
-: Install all Homebrew software
-brew bundle --file "$BOOTSTRAP_DIR/Brewfile"
+# Wait until Github SSH is working
+if ! $GITHUB_SSH; then
+	green_echo "VERIFYING GITHUB SSH ACCESS"
+	while :; do
+		ssh -T git@github.com 2>&1 | grep 'success' &> /dev/null && break
+		echo -n .
+		sleep 10
+	done
+	echo
+fi
 
-: Remove outdated versions from the cellar including casks
+green_echo "ENSURE BOOTSTRAP REPOSITORY IS PULLED AND UPDATED"
+mkdir -p "$GIT_DIR"
+BOOTSTRAP_DIR="$GIT_DIR/$BOOTSTRAP_REPO_NAME"
+if [ -d "$BOOTSTRAP_DIR" ]
+then
+	echo "Refreshing the Bootstrap repository"
+	cd "$BOOTSTRAP_DIR"
+	git pull
+	cd "$HOME"
+else
+	echo "Cloning the entire Bootstrap repository"
+	cd "$GIT_DIR"
+	git clone "git@github.com:$GITHUB_USERNAME/$BOOTSTRAP_REPO_NAME"
+	cd $HOME
+fi
+
+green_echo "INSTALLING ALL HOMEBREW PACKAGES"
+brew bundle --no-upgrade --file "$BOOTSTRAP_DIR/Brewfile"
 brew cleanup
 
-: Set all preferences and setup the Dock
+green_echo "SET PREFERENCES"
+"$BOOTSTRAP_DIR/preferences.sh"
+
+green_echo "SETUP THE DOCK"
 cd "$BOOTSTRAP_DIR"
-./preferences.sh
 ./dock-setup.sh
 cd "$HOME"
 
-# Download all dotfiles and link them?
+green_echo "DOWNLOADING AND INSTALLING DOTFILE CONFIGS"
+if [ -d "$GIT_DIR/home" ]
+then
+	echo "Refreshing the Home repository"
+	cd "$GIT_DIR/home"
+	git pull
+	cd "$HOME"
+else
+	echo "Cloning the entire Home repository"
+	cd "$GIT_DIR"
+	git clone git@github.com:richardvdoost/home
+	cd $HOME
+fi
+cd "$GIT_DIR/home"
+./install.sh
+cd "$HOME"
 
-# Download more git repos
+# TODO Set up cron jobs
 
-# Set up cron jobs
+green_echo "ALL DONE - REBOOTING"
+sudo reboot
