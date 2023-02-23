@@ -30,6 +30,10 @@ then
 fi
 
 green_echo "STARTING MAC SETUP"; echo
+echo "This script will set up command line tools, ssh, git,"
+echo "install all homebrew packages from the Brewfile,"
+echo "set up the Mac preferences, and App preferences."
+echo "And finally restart."
 
 # Ask password upfront and keep alive
 # https://github.com/joshukraine/mac-bootstrap/blob/master/bootstrap#L88
@@ -156,4 +160,4 @@ cd "$HOME"
 # TODO Set up cron jobs
 
 green_echo "ALL DONE - REBOOTING"
-# sudo reboot
+sudo reboot
