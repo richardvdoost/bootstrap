@@ -53,10 +53,12 @@ if ! $(sudo xcodebuild -license status); then
   sudo xcodebuild -license accept || echo
 fi
 
-: Clone this repo
+: Clone / refresh this repo
 mkdir -p "$GIT_DIR"
+rm -r "$GIT_DIR/bootstrap" || echo
 cd "$GIT_DIR"
 git clone https://github.com/richardvdoost/bootstrap
+cd $HOME
 
 : Install Brew
 if ! command -v brew &> /dev/null; then
