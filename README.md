@@ -1,7 +1,9 @@
 # Bootstrap
-Set up a new computer from scratch
+
+Set up a new mac from scratch
 
 ## Run the installer
+
 ```
-curl -fsSL https://raw.githubusercontent.com/richardvdoost/bootstrap/main/install.sh | bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/richardvdoost/bootstrap/main/install.sh)"
 ```

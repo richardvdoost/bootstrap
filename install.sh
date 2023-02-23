@@ -29,7 +29,7 @@ then
   abort "Bash is required to interpret this script."
 fi
 
-green_echo "STARTING MAC SETUP SCRIPT"
+green_echo "STARTING MAC BOOTSTRAP SCRIPT"
 echo "This script will set up command line tools, ssh, git, install all homebrew"
 echo "packages from the Brewfile, set up the Mac preferences and App preferences."
 echo "To reflect all changes in preferences, at the end the system will restart."
@@ -85,7 +85,8 @@ fi
 green_echo "CHECK HOMEBREW STATUS"
 if ! command -v brew &> /dev/null; then
 	echo "Installing Homebrew..."
-	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	NONINTERACTIVE=1 /bin/bash -c \
+        "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 	# Add Brew to the path
 	if ! command -v brew &> /dev/null; then
