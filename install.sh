@@ -40,13 +40,13 @@ sudo softwareupdate -ia --verbose
 if ! $(xcode-select -p &>/dev/null); then
     xcode-select --install &>/dev/null
 
-    sudo xcode-select --switch /Library/Developer/CommandLineTools # Enable command line tools
-
     : Wait until the Xcode Command Line Tools are installed
     until $(xcode-select -p &>/dev/null); do
         sleep 10
     done
 fi
+
+sudo xcode-select --switch /Library/Developer/CommandLineTools # Enable command line tools
 
 : Accept the Xcode/iOS license agreement
 if ! $(sudo xcodebuild -license status); then
