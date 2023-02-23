@@ -43,6 +43,7 @@ brew "hashicorp/tap/terraform-ls"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 
+cask "aldente"
 cask "authy"
 cask "blackhole-2ch"
 cask "blender"
