@@ -1,0 +1,11 @@
+/Applications/iTerm.app
+/Applications/Safari.app
+/System/Applications/Messages.app
+/System/Applications/Mail.app
+/System/Applications/Calendar.app
+/System/Applications/Reminders.app
+/System/Applications/Notes.app
+/Applications/MindNode.app
+/System/Applications/Podcasts.app
+/Applications/Spotify.app
+/Applications/Blender.app
