@@ -64,6 +64,12 @@ if ! command -v brew &> /dev/null; then
     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+: Add Brew to the path (Mac ARM)
+if ! command -v brew &> /dev/null; then
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "$HOME/.zprofile"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 : Install Homebrew Bundle
 brew tap Homebrew/bundle
 brew update
