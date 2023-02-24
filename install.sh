@@ -4,7 +4,7 @@
 # the repo into a proper location
 
 # Settings
-HOSTNAME="mp-pro"
+HOSTNAME="mb-pro"
 GITHUB_USERNAME="richardvdoost"
 BOOTSTRAP_REPO_NAME="bootstrap"
 
