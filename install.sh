@@ -159,4 +159,4 @@ cd "$HOME"
 
 # TODO Set up cron jobs
 
-green_echo "ALL DONE - REBOOTING"
+green_echo "ALL DONE"
