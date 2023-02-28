@@ -35,6 +35,7 @@ echo "packages from the Brewfile, set up the Mac preferences and App preferences
 
 # Ask password upfront and keep alive
 # https://github.com/joshukraine/mac-bootstrap/blob/master/bootstrap#L88
+echo
 sudo -v
 while :; do
     sudo -n true
@@ -60,16 +61,26 @@ fi
 # Set the computer hostname
 sudo scutil --set HostName $HOSTNAME
 
-# Ensure we have SSH keys
 mkdir -p "$SSH_DIR"
+
+green_echo "CHECKING SSH KEY PAIR"
 ID_RSA_FILE="$SSH_DIR/id_rsa"
 if [ ! -f "$ID_RSA_FILE" ]; then
-	green_echo "CREATING NEW SSH KEYS"
-	ssh-keygen -b 4096 -t rsa -f "$ID_RSA_FILE" -q -N ""
+    echo "Creating a new SSH key pair"
+	ssh-keygen -t rsa -b 4096 -f "$ID_RSA_FILE" -q -N ""
+else
+    echo "All good"
+fi
+
+green_echo "CHECKING GITHUB SSH HOST"
+if ! grep 'github.com ssh-rsa' "$SSH_DIR/known_hosts" &> /dev/null; then
+    echo "Adding github.com rsa fingerprint to $SSH_DIR/known_hosts"
+    ssh-keyscan -t rsa "github.com" >> "$SSH_DIR/known_hosts"
+else
+    echo "All good"
 fi
 
 green_echo "CHECKING GITHUB SSH ACCESS"
-ssh-keyscan github.com >> "$SSH_DIR/known_hosts"
 if ! ssh -T git@github.com 2>&1 | grep 'success' &> /dev/null; then
 	GITHUB_SSH=false
 	echo "No access, SSH key needs to be set up at github.com"
@@ -132,6 +143,12 @@ green_echo "INSTALLING ALL HOMEBREW PACKAGES"
 brew bundle --no-upgrade --file "$BOOTSTRAP_DIR/Brewfile"
 brew cleanup
 
+# Pin Neovim so it doesn't randomly break
+brew pin neovim
+
+# Keep Pip updated
+python3 -m pip install --upgrade pip
+
 green_echo "SET PREFERENCES"
 "$BOOTSTRAP_DIR/preferences.sh"
 
@@ -158,5 +175,9 @@ cd "$GIT_DIR/home"
 cd "$HOME"
 
 # TODO Set up cron jobs
+
+# Random stuff
+# Install pynvim for Neovim
+python3 -m pip install --user --upgrade pynvim
 
 green_echo "ALL DONE"

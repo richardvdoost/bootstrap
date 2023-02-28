@@ -7,14 +7,15 @@
 # Dotfiles installed
 # iTerm2 installed
 
-
-# Keyboard remapping launch file
-mkdir -p "$HOME/Library/LaunchAgents"
-cp com.local.KeyRemapping.plist "$HOME/Library/LaunchAgents/com.local.KeyRemapping.plist"
-
-
+GIT_DIR="$HOME/git"
+BOOTSTRAP_REPO_NAME="bootstrap"
 
 # MAC PREFERENCES
+
+# Keyboard remapping
+mkdir -p "$HOME/Library/LaunchAgents"
+cp "$GIT_DIR/$BOOTSTRAP_REPO_NAME/com.local.KeyRemapping.plist" \
+    "$HOME/Library/LaunchAgents/com.local.KeyRemapping.plist"
 
 # Disable the Character Accent Menu and Enable Key Repeat
 defaults write -globalDomain ApplePressAndHoldEnabled -bool false
@@ -24,6 +25,9 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 # Expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+# Show all file extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices "LSQuarantine" -bool "false" 
@@ -66,12 +70,19 @@ defaults write com.apple.AppleMultitouchTrackpad SecondClickThreshold -int 0
 # Increase trackpad speed (0.0 - 3.0 is normal range)
 defaults write -globalDomain com.apple.trackpad.scaling -float 5.0
 
+# Move spaces when opening an App
+defaults write -g AppleSpacesSwitchOnActivate -bool true
 
 
 # APP PREFERENCES
 
 # Use plain text for TextEdit app
 defaults write com.apple.TextEdit "RichText" -bool "false"
+
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.safari IncludeDevelopMenu -bool true
+defaults write com.apple.safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.safari com.apple.safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFIG_HOME/iterm2"
