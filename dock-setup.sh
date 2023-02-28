@@ -25,9 +25,6 @@ defaults delete com.apple.dock "recent-apps"
 # Display translucent Dock icons for hidden apps
 defaults write com.apple.dock "showhidden" -bool "true"
 
-# Change the size of the Dock
-# defaults write com.apple.dock "tilesize" -int "48"
-
 # Lock the Dock size
 defaults write com.apple.dock "size-immutable" -bool "true"
 
