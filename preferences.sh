@@ -97,8 +97,9 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Show the status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
 
-# Show battery remaining time?
-defaults write com.apple.menuextra.battery ShowTime -string "YES"
+# Show folders on top
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
 
 # APP PREFERENCES
 
