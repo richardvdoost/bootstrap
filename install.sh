@@ -10,6 +10,7 @@ BOOTSTRAP_REPO_NAME="bootstrap"
 
 SSH_DIR="$HOME/.ssh"
 GIT_DIR="$HOME/git"
+BOOTSTRAP_DIR="$GIT_DIR/$BOOTSTRAP_REPO_NAME"
 
 set -eu
 
@@ -110,7 +111,7 @@ fi
 green_echo "INSTALL HOMEBREW BUNDLE"
 brew tap Homebrew/bundle
 brew update
-brew upgrade
+brew upgrade --ignore-pinned
 
 # Wait until Github SSH is working
 if ! $GITHUB_SSH; then
@@ -125,7 +126,6 @@ fi
 
 green_echo "ENSURE BOOTSTRAP REPOSITORY IS PULLED AND UPDATED"
 mkdir -p "$GIT_DIR"
-BOOTSTRAP_DIR="$GIT_DIR/$BOOTSTRAP_REPO_NAME"
 if [ -d "$BOOTSTRAP_DIR" ]
 then
 	echo "Refreshing the Bootstrap repository"
@@ -157,24 +157,26 @@ cd "$BOOTSTRAP_DIR"
 ./dock-setup.sh
 cd "$HOME"
 
+green_echo "INSTALLING GITHUB REPOSITORIES"
+while read -r repo; do
+    if [ -d "$GIT_DIR/$repo" ]
+    then
+        echo "Refreshing the $repo repository"
+        cd "$GIT_DIR/$repo"
+        git pull
+        cd "$HOME"
+    else
+        echo "Cloning the entire $repo repository"
+        cd "$GIT_DIR"
+        git clone "git@github.com:richardvdoost/$repo"
+        cd $HOME
+    fi
+done < "$BOOTSTRAP_DIR/github-repos.txt"
+
 green_echo "DOWNLOADING AND INSTALLING DOTFILE CONFIGS"
-if [ -d "$GIT_DIR/home" ]
-then
-	echo "Refreshing the Home repository"
-	cd "$GIT_DIR/home"
-	git pull
-	cd "$HOME"
-else
-	echo "Cloning the entire Home repository"
-	cd "$GIT_DIR"
-	git clone git@github.com:richardvdoost/home
-	cd $HOME
-fi
 cd "$GIT_DIR/home"
 ./install.sh
 cd "$HOME"
-
-# TODO Set up cron jobs
 
 # Random stuff
 # Install pynvim for Neovim
