@@ -1,0 +1,4 @@
+home
+mindnode-parser
+screencast
+spotify-automation
