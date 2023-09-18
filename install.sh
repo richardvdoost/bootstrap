@@ -40,7 +40,7 @@ echo
 sudo -v
 while :; do
     sudo -n true
-    caffeinate -id sleep 60
+    caffeinate -u sleep 60
     kill -0 "$$" || exit
 done 2>/dev/null &
 
@@ -72,6 +72,9 @@ if [ ! -f "$ID_RSA_FILE" ]; then
 else
     echo "All good"
 fi
+
+# Turn on SSH into this machine
+sudo systemsetup -setremotelogin on
 
 green_echo "CHECKING GITHUB SSH HOST"
 if ! grep 'github.com ssh-rsa' "$SSH_DIR/known_hosts" &> /dev/null; then
