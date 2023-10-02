@@ -48,6 +48,7 @@ brew "yt-dlp"
 brew "zoxide"
 brew "zsh-syntax-highlighting"
  
+cask "adobe-acrobat-reader"
 cask "aldente"
 cask "authy"
 cask "blackhole-2ch"
