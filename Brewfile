@@ -8,6 +8,7 @@ tap "koekeishiya/formulae"
 tap "vladdoster/formulae" 
 
 brew "ack"
+brew "act"
 brew "awscli"
 brew "awslogs"
 brew "bash-language-server"
