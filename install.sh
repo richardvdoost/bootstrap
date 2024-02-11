@@ -45,7 +45,7 @@ while :; do
 done 2>/dev/null &
 
 green_echo "INSTALL ALL AVAILABLE UPDATES"
-sudo softwareupdate -ia --verbose
+# sudo softwareupdate -ia --verbose
 
 # Install Xcode command line tools
 if ! $(xcode-select -p &>/dev/null); then
@@ -114,7 +114,7 @@ fi
 green_echo "INSTALL HOMEBREW BUNDLE"
 brew tap Homebrew/bundle
 brew update
-brew upgrade --ignore-pinned
+# brew upgrade --ignore-pinned
 
 # Wait until Github SSH is working
 if ! $GITHUB_SSH; then
@@ -149,8 +149,10 @@ brew cleanup
 # Pin Neovim so it doesn't randomly break
 brew pin neovim
 
-# Keep Pip updated
-python3 -m pip install --upgrade pip
+# Install Python tools with pipx
+pipx ensurepath
+pipx install poetry
+pipx install pynvim
 
 green_echo "SET PREFERENCES"
 "$BOOTSTRAP_DIR/preferences.sh"
@@ -180,9 +182,5 @@ green_echo "DOWNLOADING AND INSTALLING DOTFILE CONFIGS"
 cd "$GIT_DIR/home"
 ./install.sh
 cd "$HOME"
-
-# Random stuff
-# Install pynvim for Neovim
-python3 -m pip install --user --upgrade pynvim
 
 green_echo "ALL DONE"

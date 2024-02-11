@@ -1,8 +1,6 @@
 tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "vladdoster/formulae" 
@@ -31,9 +29,9 @@ brew "koekeishiya/formulae/yabai"
 brew "mpv"
 brew "neovim"
 brew "newsboat"
-brew "node"
 brew "octave"
 brew "php"
+brew "pipx"
 brew "plantuml"
 brew "redis", restart_service: true
 brew "rg"
@@ -87,4 +85,3 @@ mas "Messenger", id: 1480068668
 mas "MindNode", id: 1289197285
 mas "Telegram", id: 747648890
 mas "The Unarchiver", id: 425424353
-mas "WhatsApp", id: 1147396723
