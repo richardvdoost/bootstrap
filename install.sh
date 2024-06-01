@@ -114,7 +114,7 @@ fi
 green_echo "INSTALL HOMEBREW BUNDLE"
 brew tap Homebrew/bundle
 brew update
-# brew upgrade --ignore-pinned
+brew upgrade
 
 # Wait until Github SSH is working
 if ! $GITHUB_SSH; then
