@@ -45,7 +45,7 @@ while :; do
 done 2>/dev/null &
 
 green_echo "INSTALL ALL AVAILABLE UPDATES"
-# sudo softwareupdate -ia --verbose
+sudo softwareupdate -ia --verbose
 
 # Install Xcode command line tools
 if ! $(xcode-select -p &>/dev/null); then
