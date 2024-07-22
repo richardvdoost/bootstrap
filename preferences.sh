@@ -32,6 +32,8 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false 
 
+# Disable auto switching Workspaces?
+defaults write com.apple.dock workspaces-auto-swoosh -bool true
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
