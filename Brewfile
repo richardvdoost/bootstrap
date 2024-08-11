@@ -21,6 +21,3 @@ cask "onedrive"
 cask "youdaodict"
 cask "tableau-public"
 cask "baidunetdisk"
-
-mas "Adblock Plus", id: 1432731683
-mas "The Unarchiver", id: 425424353
