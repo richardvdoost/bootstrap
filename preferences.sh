@@ -12,14 +12,6 @@ BOOTSTRAP_REPO_NAME="bootstrap"
 
 # MAC PREFERENCES
 
-# Keyboard remapping
-mkdir -p "$HOME/Library/LaunchAgents"
-cp "$GIT_DIR/$BOOTSTRAP_REPO_NAME/com.local.KeyRemapping.plist" \
-    "$HOME/Library/LaunchAgents/com.local.KeyRemapping.plist"
-
-# Disable the Character Accent Menu and Enable Key Repeat
-defaults write -globalDomain ApplePressAndHoldEnabled -bool false
-
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
@@ -43,35 +35,13 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 # 3 : All controls
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-# Don't use smart quotes
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
-# Disable automatic period substitution
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
-
-# Disable automatic capitalization
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
-
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
 # Enable tap to click for the trackpad
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Trackpad haptic feedback
-# 0: Light
-# 1: Medium
-# 2: Firm
-defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
-defaults write com.apple.AppleMultitouchTrackpad SecondClickThreshold -int 0
-
 # Increase trackpad speed (0.0 - 3.0 is normal range)
-defaults write -globalDomain com.apple.trackpad.scaling -float 5.0
-
-# Move spaces when opening an App
-defaults write -g AppleSpacesSwitchOnActivate -bool true
+defaults write -globalDomain com.apple.trackpad.scaling -float 3.0
 
 # Set 'home' as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
@@ -105,12 +75,3 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Use plain text for TextEdit app
 defaults write com.apple.TextEdit RichText -bool false
-
-# Enable the Develop menu and the Web Inspector in Safari (doesn't work anymore?)
-defaults write com.apple.safari IncludeDevelopMenu -bool true
-defaults write com.apple.safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.safari com.apple.safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-
-# Tell iTerm2 to use the custom preferences in the directory
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$XDG_CONFIG_HOME/iterm2"
-defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true

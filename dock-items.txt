@@ -1,11 +1,8 @@
-/Applications/iTerm.app
 /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app
-/System/Applications/Messages.app
 /System/Applications/Mail.app
 /System/Applications/Calendar.app
-/System/Applications/Reminders.app
+/Applications/网易有道翻译.app
 /System/Applications/Notes.app
-/Applications/MindNode.app
-/System/Applications/Podcasts.app
 /Applications/Spotify.app
-/Applications/Blender.app
+/System/Applications/Messages.app
+/Applications/WeChat.app

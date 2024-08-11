@@ -13,9 +13,17 @@ done
 echo
 
 # Add all persistent apps
+# defaults write com.apple.dock "persistent-apps" -array '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/System/Applications/Safari.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+# while read -r dock_item; do
+#     sleep 10
+#     killall Dock
+#     echo "Adding '$dock_item' ..."
+#     defaults write com.apple.dock persistent-apps -array-add "'<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$dock_item</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'"
+# done < dock-items.txt
+
 defaults write com.apple.dock "persistent-apps" -array $(
     while read -r dock_item; do
-      echo -n "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$dock_item</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict> " 
+      echo -n "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$dock_item</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict> "
     done < dock-items.txt
 )
 
@@ -29,7 +37,7 @@ defaults write com.apple.dock "showhidden" -bool "true"
 defaults write com.apple.dock "size-immutable" -bool "true"
 
 # Automatically hide/show the Dock
-defaults write com.apple.dock "autohide" -bool "true"
+#defaults write com.apple.dock "autohide" -bool "true"
 
 # Time the cursor has to stay still for the Dock to show up
 defaults write com.apple.dock "autohide-delay" -float "0.05"

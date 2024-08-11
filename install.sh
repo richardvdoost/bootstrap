@@ -4,8 +4,8 @@
 # the repo into a proper location
 
 # Settings
-HOSTNAME="mb-pro"
-GITHUB_USERNAME="richardvdoost"
+HOSTNAME="vv-macair"
+GITHUB_USERNAME="VeronicaZhong"
 BOOTSTRAP_REPO_NAME="bootstrap"
 
 SSH_DIR="$HOME/.ssh"
@@ -39,8 +39,9 @@ echo "packages from the Brewfile, set up the Mac preferences and App preferences
 echo
 sudo -v
 while :; do
+    echo "Keeping the Mac awake and keeping sudo alive"
     sudo -n true
-    caffeinate -u sleep 60
+    caffeinate -id sleep 30
     kill -0 "$$" || exit
 done 2>/dev/null &
 
@@ -73,8 +74,8 @@ else
     echo "All good"
 fi
 
-# Turn on SSH into this machine
-sudo systemsetup -setremotelogin on
+# # Turn on SSH into this machine
+# sudo systemsetup -setremotelogin on
 
 green_echo "CHECKING GITHUB SSH HOST"
 if ! grep 'github.com ssh-rsa' "$SSH_DIR/known_hosts" &> /dev/null; then
@@ -146,14 +147,6 @@ green_echo "INSTALLING ALL HOMEBREW PACKAGES"
 brew bundle --no-upgrade --file "$BOOTSTRAP_DIR/Brewfile"
 brew cleanup
 
-# Pin Neovim so it doesn't randomly break
-brew pin neovim
-
-# Install Python tools with pipx
-pipx ensurepath
-pipx install poetry
-pipx install pynvim
-
 green_echo "SET PREFERENCES"
 "$BOOTSTRAP_DIR/preferences.sh"
 
@@ -178,9 +171,9 @@ while read -r repo; do
     fi
 done < "$BOOTSTRAP_DIR/github-repos.txt"
 
-green_echo "DOWNLOADING AND INSTALLING DOTFILE CONFIGS"
-cd "$GIT_DIR/home"
-./install.sh
-cd "$HOME"
+# green_echo "DOWNLOADING AND INSTALLING DOTFILE CONFIGS"
+# cd "$GIT_DIR/home"
+# ./install.sh
+# cd "$HOME"
 
 green_echo "ALL DONE"
