@@ -44,8 +44,8 @@ while :; do
     kill -0 "$$" || exit
 done 2>/dev/null &
 
-green_echo "INSTALL ALL AVAILABLE UPDATES"
-sudo softwareupdate -ia --verbose
+# green_echo "INSTALL ALL AVAILABLE UPDATES"
+# sudo softwareupdate -ia --verbose
 
 # Install Xcode command line tools
 if ! $(xcode-select -p &>/dev/null); then
@@ -139,7 +139,7 @@ else
 	echo "Cloning the entire Bootstrap repository"
 	cd "$GIT_DIR"
 	git clone "git@github.com:$GITHUB_USERNAME/$BOOTSTRAP_REPO_NAME"
-	cd $HOME
+	cd "$HOME"
 fi
 
 green_echo "INSTALLING ALL HOMEBREW PACKAGES"
