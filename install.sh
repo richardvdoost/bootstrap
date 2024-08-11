@@ -166,7 +166,7 @@ while read -r repo; do
     else
         echo "Cloning the entire $repo repository"
         cd "$GIT_DIR"
-        git clone "git@github.com:richardvdoost/$repo"
+        git clone "git@github.com:$GITHUB_USERNAME/$repo"
         cd $HOME
     fi
 done < "$BOOTSTRAP_DIR/github-repos.txt"
