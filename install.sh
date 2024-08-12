@@ -31,7 +31,7 @@ then
 fi
 
 green_echo "STARTING MAC BOOTSTRAP SCRIPT"
-echo "This script will set up command line tools, ssh, git, install all homebrew"
+echo "This script will set up command line tools, ssh, git, install all Homebrew"
 echo "packages from the Brewfile, set up the Mac preferences and App preferences."
 
 # Ask password upfront and keep alive
